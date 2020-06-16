@@ -1,7 +1,4 @@
 #!/bin/sh
-#docker build	--no-cache													\
-#				-t nasm:v1 .
-
 docker run		--rm														\
 				--name nasm													\
 				-it															\
@@ -11,5 +8,3 @@ docker run		--rm														\
 #				-p 22:22													\
 #				--mount type=bind,source="$HOME/.ssh",target="/root/.ssh"	\
 #				--mount type=bind,source="$HOME/Projects/libasm",target="/root/libasm"	\
-#docker rmi nasm:v1
-#docker rmi debian:buster
