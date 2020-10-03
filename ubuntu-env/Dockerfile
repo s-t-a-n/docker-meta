@@ -1,5 +1,9 @@
 From ubuntu:latest
 
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN ln -fs /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime
+
 RUN echo y | unminimize && apt update && apt install -y vim ranger netcat openssh-server net-tools zsh bash wget sudo git
 
 RUN wget -O /etc/skel/.zshrc https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
