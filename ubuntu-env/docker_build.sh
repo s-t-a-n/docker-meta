@@ -1,3 +1,5 @@
 #!/bin/sh
-source			./env.conf
-docker build	-t $build_name:$build_version .
+source			./conf.env
+docker build	--build-arg OS=$image					\
+				--build-arg OS_RELEASE=$image_release	\
+				-t $build_name:$build_version .

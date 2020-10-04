@@ -1,4 +1,7 @@
-From ubuntu:latest
+ARG OS
+ARG OS_RELEASE
+
+From ${OS}:${OS_RELEASE}
 
 ENV DEBIAN_FRONTEND=noninteractive
 

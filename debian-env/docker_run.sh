@@ -1,7 +1,7 @@
 #!/bin/sh
-source			env.conf
+source			./conf.env
 docker run		--rm														\
 				--name $build_name											\
 				-it															\
-				-p 2222:2222												\
+				-p $port_low:$port_high										\
 				$build_name:$build_version
